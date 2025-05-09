@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Configurator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container top-left">
+        <h1 class="title">AV Device Configurator</h1>
+        
+        <div class="form-group">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" class="interactive-select">
+                <option value="Conference Room">Conference Room</option>
+                <option value="Huddle Room">Huddle Room</option>
+                <option value="Training Room">Training Room</option>
+                <option value="Board Room">Board Room</option>
+                <option value="Classroom">Classroom</option>
+                <option value="Auditorium">Auditorium</option>
+                <option value="House of Worship">House of Worship</option>
+                <option value="PA System">PA System</option>
+                <option value="Retail Outlets">Retail Outlets</option> 
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="roomSize">Room Size:</label>
+            <select id="roomSize" class="interactive-select">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Open Area">Open Area</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="useCase">Use Case:</label>
+            <select id="useCase" class="interactive-select">
+                <option value="Video Conferencing">Video Conferencing</option>
+                <option value="Background Music">Background Music</option>
+                <option value="Training">Training</option>
+                <option value="Public Addressing">Public Addressing</option>
+                <option value="Networked AV">Networked AV</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="budget">Budget:</label>
+            <select id="budget" class="interactive-select">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <button id="recommendButton" class="interactive-button" onclick="getRecommendations()">Get Recommendations</button>
+
+        <div class="recommendations-area">
+            <h2 class="recommendations-title">Recommended Products:</h2>
+            <ul id="recommendations"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
